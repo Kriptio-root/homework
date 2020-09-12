@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#frame,image{
+    background: navy;
+    width: 700px;
+    height: 450px;
+    margin:auto;
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    box-shadow: 1px 2px 4px green;
+    
+}
+#image{
+    height: 100%;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <h1>
+        <pre>
+            <script>
+                var elFarame=document.getElementById("image");
+                var cars= [
+                    {type:"Honda",year:2020,price:160000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Toyota",year:2018,price:135000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Ferrari",year:2017,price:202000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Honda",year:2018,price:150000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Toyota",year:2019,price:59666,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Ferrari",year:2006,price:24561,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Audi",year:2010,price:60000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Suzuki",year:2019,price:137000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"},
+                    {type:"Ferrari",year:2006,price:200000,img:"https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg"}
+                ];
+                var searchArray=cars.filter(rule);
+                function rule(element,index,array){
+                    return element.type=="Toyota";
+                }
+                for(i=0;i,searchArray.length;i++)
+                {
+                    document.writeln(searchArray[i].type);
+                    document.writeln(searchArray[i].year);
+                    document.writeln(searchArray[i].price);
+                    document.writeln("<img style='width:250px;' src='"+searchArray[i].img+"'<br>");
+                    document.writeln("---------------------");
+                }
+setInterval(Slide,3000);
+function Slide(){
+  newIndex=Math.round(Math.random()*(cars.length));  
+  elImage.src=cars[newIndex].img;
+}
+            </script>
+        </pre>
+    </h1>
+    <div id="frame"><img id="image" src="https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg" alt=""></div>
+</body>
+</html>

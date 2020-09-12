@@ -1,0 +1,39 @@
+package firstquiz;
+
+public class Main {
+	///////global public vars//////////
+public int minutes,hours,seconds;
+///////tick/////////////////
+public void tick() {
+	minutes++;
+	hours+=minutes/60;
+	minutes+=seconds/60;
+	seconds%=60;
+	hours%=24;
+}
+////////////show//////////
+public void show() {
+	if (hours < 10)
+		System.out.print("0");
+	System.out.print(hours +":");
+	if(minutes < 10)
+		System.out.print("0");
+	System.out.print(minutes+":");
+	if(minutes < 10)
+		System.out.print("0");
+	System.out.print(seconds);
+}
+
+	public static void main(String[] args) {
+		Main c1=new Main();
+		
+		c1.hours=10;
+		c1.minutes=8;
+		c1.seconds=50;
+		System.out.print("The time is: ");
+		c1.show();
+		System.out.println();
+
+	}
+
+}

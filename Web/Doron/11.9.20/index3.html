@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>
+    <pre>
+        <script>
+            var myArray=[1,"PHP",3,4,7,"javascript","Angular"];
+            myArray.splice(2,1);
+            document.writeln(myArray);
+          function reverseArr(num) {
+ var str =num.toString();
+ var len=str.length;
+ var arry=new Array();
+ for(i=1;i<len+1;i++){
+     digit=parseInt(str.charAt(len-i));
+     arry.push(digit);
+ }
+              return arry;
+          }
+
+          function reverseArr2(num, ...rest){
+return reverseArr2(num, ...rest);
+          }
+          rev=reverseArr(123456);
+          document.writeln(rev);
+        </script>
+    </pre>
+</h1>
+    
+</body>
+</html>

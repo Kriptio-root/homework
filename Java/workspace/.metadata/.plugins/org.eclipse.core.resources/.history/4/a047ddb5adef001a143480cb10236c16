@@ -1,0 +1,10 @@
+package magicksquare;
+
+public class magicksquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

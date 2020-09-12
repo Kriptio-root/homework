@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><h1>
+    <pre>
+ <script>
+     const numbers = [7,2,10,5,4,9];
+     var sum=0;
+     function ToString(...arr){
+         return arr;
+     }
+let arr=[];
+     array2=ToString(...numbers);
+     document.writeln(array2.toString());
+     //-------------------
+     maximum=Math.max(...numbers);
+     minimum=Math.min(...numbers);
+     document.writeln(maximum);
+     document.writeln(minimum);
+     document.writeln(array2.sort(function(a, b){return a-b}));
+for(i=minimum,j=0;i<maximum+1;j++,i++)
+{
+arr[j]=i;
+sum=sum+arr[j];
+if(arr[j]==minimum )
+{
+    sum=sum-minimum
+}
+if(arr[j]==maximum)
+{
+    sum=sum-maximum;
+}
+}
+document.writeln(arr.toString());
+document.writeln(sum);
+ </script></pre>   </h1>
+</body>
+</html>
