@@ -7,10 +7,15 @@ echo "enter the shift num"
 read f
 z=$x
 string=""
-if [ $x -gt $y ]
+if [ $f -lt 0 ]
 then
-echo "enter low num frist!"
-elif [ $x -lt $y ]
+while [ $z -lt $y ]
+do
+string="$string$z@@"
+z=$[z-f]
+done
+fi
+if [ $f -gt 0 ]
 then
 while [ $z -lt $y ]
 do
@@ -18,5 +23,14 @@ string="$string$z@@"
 z=$[z+f]
 done
 fi
-
+if [ $x -gt $y ]
+then
+echo "pablo stom"
+while [ $z -gt $y ]
+do
+echo "amarti leha stom"
+string="$string$z@@"
+z=$[z+f]
+done
+fi
 echo $string
